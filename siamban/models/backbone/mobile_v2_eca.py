@@ -2,9 +2,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
-# from coordatt import CoordAtt
-# from siamban.models.backbone.coordatt import CoordAtt
-from siamban.models.backbone.wh_eca import CoordAtt
 from siamban.models.backbone.eca_module import eca_layer
 import torch
 import torch.nn as nn
@@ -49,14 +46,11 @@ class InvertedResidual(nn.Module):
             nn.BatchNorm2d(inp * expand_ratio),
             nn.ReLU6(inplace=True),
 
-            # CoordAtt(inp * expand_ratio, inp * expand_ratio, reduction=16),  # xyl
-
             # pw-linear
             nn.Conv2d(inp * expand_ratio, oup, 1, 1, 0, bias=False),
             nn.BatchNorm2d(oup),
 
-            CoordAtt(oup, oup, reduction=32)
-            # eca_layer(oup, k_size=3)  # ECA XYL 20211121  k_size == dd -->  RuntimeError: : The expanded size of the tensor (89) must match the existing size (88) at non-singleton dimension 1
+            eca_layer(oup, k_size=3)  # ECA XYL 20211121  k_size == dd -->  RuntimeError: : The expanded size of the tensor (89) must match the existing size (88) at non-singleton dimension 1
         )
 
     def forward(self, x):
