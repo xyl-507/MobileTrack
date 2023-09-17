@@ -1,6 +1,6 @@
 # [IET Image Processing 2022] MobileTrack: Siamese efficient mobile network for high-speed UAV tracking
 
-This is an official pytorch implementation of the 2023 IEEE Transactions on Geoscience and Remote Sensing paper: 
+This is an official pytorch implementation of the 2022 IET Image Processing paper: 
 ```
 MobileTrack: Siamese efficient mobile network for high-speed UAV tracking
 (accepted by IET Image Processing, DOI: 10.1049/ipr2.12565)
