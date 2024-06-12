@@ -6,6 +6,7 @@ MobileTrack: Siamese efficient mobile network for high-speed UAV tracking
 (accepted by IET Image Processing, DOI: 10.1049/ipr2.12565)
 ```
 
+![image](https://github.com/xyl-507/MobileTrack/blob/main/figs/fig.tif)
 
 The paper can be downloaded from [IET Image Processing](https://doi.org/10.1049/ipr2.12565)
 
