@@ -7,8 +7,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from siamban.core.xcorr import xcorr_fast, xcorr_depthwise, pixel_xcorr, tensor_to_pil, pixelwise_xcorr_1, pixelwise_xcorr_2, pg_xcorr
-from siamban.models.backbone.wh_eca import CoordAtt
+from siamban.core.xcorr import xcorr_fast, xcorr_depthwise
+# from siamban.models.backbone.wh_eca import CoordAtt
 
 
 class BAN(nn.Module):

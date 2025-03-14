@@ -8,7 +8,7 @@ from __future__ import unicode_literals
 from siamban.models.backbone.alexnet import alexnetlegacy, alexnet
 from siamban.models.backbone.mobile_v2 import mobilenetv2
 # from siamban.models.backbone.mobile_v2_eca import mobilenetv2
-from siamban.models.backbone.repvgg import create_RepVGG_A0, create_RepVGG_B1g2
+# from siamban.models.backbone.repvgg import create_RepVGG_A0, create_RepVGG_B1g2
 from siamban.models.backbone.resnet_atrous import resnet18, resnet34, resnet50
 # from siamban.models.backbone.resnet_atrous_iAFF_triplet import resnet18, resnet34, resnet50
 # from siamban.models.backbone.resnext_atrous_iAFF_triplet import resnet18, resnet34, resnet50
@@ -22,8 +22,8 @@ BACKBONES = {
               'resnet34': resnet34,
               'resnet50': resnet50,
               'alexnet': alexnet,
-              'repvgg-a0': create_RepVGG_A0,
-              'repvgg-b1g2': create_RepVGG_B1g2
+              # 'repvgg-a0': create_RepVGG_A0,
+              # 'repvgg-b1g2': create_RepVGG_B1g2
             }
 
 
